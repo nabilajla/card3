@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px auto;
+  background-color: #ccc;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "article1 article2 article3";
+  width: 70%;
+  height: 350px;
+  margin: 50px auto;
+}
+.article1,
+.article2,
+.article3 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+.article1 > p,
+.article2 > p,
+.article3 > p {
+  margin: 10px;
+  font-family: "Lexend Deca", sans-serif;
+}
+.article1 > header > img,
+.article2 > header > img,
+.article3 > header > img {
+  margin: 10px;
+}
+.article1 > h2,
+.article2 > h2,
+.article3 > h2 {
+  margin: 10px;
+}
+.article1 > button,
+.article2 > button,
+.article3 > button {
+  outline: none;
+  border: none;
+  padding: 15px;
+  border-radius: 20px;
+  margin: 10px;
+  cursor: pointer;
+}
+.article1 > button {
+  color: hsl(31, 77%, 52%);
+}
+.article2 > button {
+  color: hsl(184, 100%, 22%);
+}
+.article3 > button {
+  color: hsl(179, 100%, 13%);
+}
+.article1 {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background-color: hsl(31, 77%, 52%);
+  color: white;
+  grid-area: article1;
+}
+.article2 {
+  background-color: hsl(184, 100%, 22%);
+  color: white;
+  grid-area: article2;
+}
+.article3 {
+  background-color: hsl(179, 100%, 13%);
+  color: white;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  grid-area: article3;
+}
+@media only screen and (max-width: 800px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 50px auto;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "article1  "
+      "article2"
+      "article3";
+    width: 60%;
+    height: 350px;
+    margin: 0;
+  }
+  .article1 {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+        border-bottom-left-radius:0px;
+  }
+  .article1,
+  .article2,
+  .article3 {
+    height: 400px;
+  }
+  .article3 {
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 0px;
+  }
+}
